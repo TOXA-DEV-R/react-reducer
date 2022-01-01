@@ -8,7 +8,7 @@ const App = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    dispatch({ tpye: "add", payload: { name } });
+    dispatch({ type: "add", payload: { name } });
     setName("");
     setConrolRender(!conrolRender);
   };

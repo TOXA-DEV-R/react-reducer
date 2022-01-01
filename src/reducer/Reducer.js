@@ -1,7 +1,7 @@
 const reducer = (state, action) => {
   const { payload } = action;
-  console.log(action)
-  switch (action.tpye) {
+
+  switch (action.type) {
     case "add":
       return [
         ...state,
@@ -13,7 +13,7 @@ const reducer = (state, action) => {
         item.id === payload.id ? { ...item, completed: !item.completed } : item
       );
     case "delete":
-      return state.map((item) => item.id !== payload.id);
+      return state.filter((item) => item.id !== payload.id);
     default:
       return state;
   }
